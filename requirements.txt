@@ -1,0 +1,16 @@
+streamlit
+numpy
+pandas
+matplotlib
+scipy
+scikit-learn
+Pillow
+
+# Optionnel -- nécessaire uniquement pour charger de vraies lames .svs.
+# En son absence, l'application retombe automatiquement (et de façon
+# visible, jamais silencieuse) sur des caractéristiques d'image
+# synthétiques : le pipeline fonctionne alors de bout en bout sans lame.
+# Nécessite aussi la bibliothèque système OpenSlide :
+#   - Debian/Ubuntu : sudo apt install openslide-tools
+#   - macOS (Homebrew) : brew install openslide
+# openslide-python
