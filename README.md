@@ -254,3 +254,4 @@ deux méthodes indépendantes « from scratch ».
 # mutilomics-article
 # DIABLO-et-RBC-pour-l-int-gration-multi-omique-explicable
 # DIABLO-et-RBC-pour-l-int-gration-multi-omique-explicable
+# DIABLO-et-RBC-pour-l-int-gration-multi-omique-explicable
