@@ -251,7 +251,4 @@ deux méthodes indépendantes « from scratch ».
   image, `BlockPLSDA`, `CaseBase`, métriques, figures), sans effet de bord.
 - `app.py` — interface Streamlit.
 - `requirements.txt` — dépendances.
-# mutilomics-article
-# DIABLO-et-RBC-pour-l-int-gration-multi-omique-explicable
-# DIABLO-et-RBC-pour-l-int-gration-multi-omique-explicable
-# DIABLO-et-RBC-pour-l-int-gration-multi-omique-explicable
+
