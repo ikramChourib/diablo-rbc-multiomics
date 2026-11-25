@@ -253,3 +253,4 @@ deux méthodes indépendantes « from scratch ».
 - `requirements.txt` — dépendances.
 # mutilomics-article
 # DIABLO-et-RBC-pour-l-int-gration-multi-omique-explicable
+# DIABLO-et-RBC-pour-l-int-gration-multi-omique-explicable
