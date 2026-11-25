@@ -164,7 +164,8 @@ d'origine :
 - normalisation de coloration Reinhard (activée par défaut) ;
 - grille de k pour le RBC (3, 5, 7, 9, 11, 15, 21 par défaut) ;
 - nombre de plis / répétitions de validation croisée pour l'estimation des
-  poids de bloc et la sélection de k du RBC.
+  poids de bloc et la sélection de k du RBC ;
+- nombre de partitions de l'étude répétée (20 par défaut).
 
 ## Résultats produits
 
@@ -178,6 +179,20 @@ d'origine :
   officiel (sous-ensemble de patientes différent).
 - **Comparaison équitable** : graphiques en barres exactitude/F1, à
   patientes identiques.
+- **Étude répétée** : `StratifiedShuffleSplit` tire 20 partitions par défaut
+  (`N_REPEATS`, modifiable ; seed 0) sur toutes les 220 patientes, avec 150
+  patientes d'entraînement et 70 de test à chaque partition. Les mêmes
+  partitions sont réutilisées pour DIABLO dense, DIABLO sparse, RBC et les
+  configurations A/B. À chaque répétition, le centrage-réduction, la
+  normalisation Reinhard, DIABLO (H=2, design inter-blocs=0,1 et vers Y=1),
+  ainsi que la sélection de k et des poids RBC (CV 5 plis × 2 répétitions)
+  sont ajustés sans utiliser le test. Le tableau et les CSV donnent
+  l'exactitude et le F1 macro (A, B et delta B−A) en entraînement et en test,
+  en moyenne et écart-type d'échantillon (`ddof=1`). Chaque delta est calculé
+  par partition avant agrégation. **Les protéines ne sont pas utilisées dans
+  l'étude à partitions répétées, faute de disponibilité sur toutes les
+  patientes.** Ces résultats ne sont donc pas directement comparables à ceux
+  de la partition d'origine.
 - **RBC — détails** : poids de bloc, k sélectionné, scores de validation
   croisée par k, et un **sélecteur de patiente test** pour citer ses k plus
   proches voisines (RETRIEVE du RBC) : identifiant, vraie classe, distance
@@ -237,3 +252,4 @@ deux méthodes indépendantes « from scratch ».
 - `app.py` — interface Streamlit.
 - `requirements.txt` — dépendances.
 # mutilomics-article
+# DIABLO-et-RBC-pour-l-int-gration-multi-omique-explicable
